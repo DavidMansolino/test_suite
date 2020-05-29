@@ -1,0 +1,10 @@
+#VRML_SIM R2020a utf8
+
+PROTO SlotContainer [
+  field MFNode slot [ BoxShape{} ]
+]
+{
+  Group {
+    children IS slot
+  }
+}
