@@ -51,7 +51,7 @@ if len(sys.argv) > 1:
 testGroups = ['api', 'physics', 'protos', 'parser', 'rendering']
 
 # global files
-testsFolderPath = os.environ['WEBOTS_HOME'] + os.sep + 'tests' + os.sep
+testsFolderPath = os.path.abspath(__file__)
 outputFilename = testsFolderPath + 'output.txt'
 defaultProjectPath = testsFolderPath + 'default' + os.sep
 supervisorControllerName = 'test_suite_supervisor'
@@ -156,7 +156,7 @@ def appendToOutputFile(txt):
 def executeMake():
     """Execute 'make release' to ensure every controller/plugin is compiled."""
     curdir = os.getcwd()
-    os.chdir(os.path.join(os.environ['WEBOTS_HOME'], 'tests'))
+    os.chdir(os.path.abspath(__file__))
     command = Command('make release -j%d' % multiprocessing.cpu_count())
     command.run(silent=False)
     os.chdir(curdir)
