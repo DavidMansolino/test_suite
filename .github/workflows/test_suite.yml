@@ -23,4 +23,5 @@ jobs:
         export LIBGL_ALWAYS_SOFTWARE=true
         xvfb-run --auto-servernum $WEBOTS_HOME/webots --version
         xvfb-run --auto-servernum $WEBOTS_HOME/webots --sysinfo
+        xvfb-run --auto-servernum python tests/test_suite.py
         xvfb-run --auto-servernum $WEBOTS_HOME/webots  $WEBOTS_HOME/projects/samples/devices/worlds/gyro.wbt --stdout --stderr --batch --minimize
