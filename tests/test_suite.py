@@ -51,7 +51,7 @@ if len(sys.argv) > 1:
 testGroups = ['api', 'physics', 'protos', 'parser', 'rendering']
 
 # global files
-testsFolderPath = os.path.dirname(os.path.abspath(__file__))
+testsFolderPath = os.path.dirname(os.path.abspath(__file__)) + os.sep
 outputFilename = testsFolderPath + 'output.txt'
 defaultProjectPath = testsFolderPath + 'default' + os.sep
 supervisorControllerName = 'test_suite_supervisor'
