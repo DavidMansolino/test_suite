@@ -16,7 +16,7 @@ jobs:
         wget https://github.com/cyberbotics/webots/releases/download/R2020a-rev1/webots-R2020a-rev1-x86-64.tar.bz2
         tar xjf webots-R2020a-rev1-x86-64.tar.bz2
     - name: Install Webots Dependencies
-      run: sudo apt -y install xserver-xorg-core libpulse0 libglu1-mesa g++ libusb-dev swig python2.7-dev libglu1-mesa-dev libglib2.0-dev libxkbcommon-x11-dev
+      run: sudo apt -y install xserver-xorg-core libpulse0 libglu1-mesa g++ libusb-dev libavcodec-extra libglu1-mesa-dev libglib2.0-dev
     - name: Run Test
       run: |
         export WEBOTS_HOME=$PWD/webots
