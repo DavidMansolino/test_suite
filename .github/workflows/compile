@@ -1,0 +1,16 @@
+name: Simulation
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Webots Dependencies
+      run: sudo apt -y install sudo apt install git g++ cmake execstack libusb-dev swig libglu1-mesa-dev libglib2.0-dev libfreeimage-dev libfreetype6-dev libxml2-dev libzzip-0-13 libboost-dev libavcodec-extra libgd-dev libssh-gcrypt-dev libzip-dev libreadline-dev pbzip2 libpci-dev libssl1.1-dev ffmpeg python2.7-dev python3.6-dev python3.7-dev python3.8-dev python-pip-whl openjdk-11-jdk npm
+    - name: Make
+      run: make distrib -j4
+    - uses: actions/upload-artifact@v2
+      with:
+        path: distribution/*.tar.bz2
