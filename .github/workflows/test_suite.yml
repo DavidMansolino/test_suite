@@ -24,4 +24,4 @@ jobs:
         xvfb-run --auto-servernum $WEBOTS_HOME/webots --version
         xvfb-run --auto-servernum $WEBOTS_HOME/webots --sysinfo
         xvfb-run --auto-servernum python $GITHUB_WORKSPACE/tests/test_suite.py
-        xvfb-run --auto-servernum $WEBOTS_HOME/webots  $WEBOTS_HOME/projects/samples/devices/worlds/gyro.wbt --stdout --stderr --batch --minimize
+        # xvfb-run --auto-servernum $WEBOTS_HOME/webots  $WEBOTS_HOME/projects/samples/devices/worlds/gyro.wbt --stdout --stderr --batch --minimize
