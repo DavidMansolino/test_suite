@@ -21,8 +21,6 @@ jobs:
       run: |
         export WEBOTS_HOME=$PWD/webots
         export LIBGL_ALWAYS_SOFTWARE=true
-        xvfb-run --auto-servernum $WEBOTS_HOME/webots --version
-        xvfb-run --auto-servernum $WEBOTS_HOME/webots --sysinfo
         xvfb-run --auto-servernum python $GITHUB_WORKSPACE/tests/test_suite.py
     - uses: actions/upload-artifact@v2
       with:
